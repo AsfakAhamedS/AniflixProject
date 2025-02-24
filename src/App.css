@@ -1,0 +1,121 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.bodylogin {
+  background-color: #000;
+  color: #fff;   
+}
+.bodylogin  .navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #141519;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+  z-index: 1000; 
+}
+.loginlogo .logoimg{
+  height: 24px;
+  width: 136px;
+}
+.logincontent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.logincontent .logincontainer{
+  display: flex;
+  background-color: #141519;
+  border-radius: 10px;
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+.logincontainer .left {
+  flex: 1;
+  text-align: center;
+  border-radius: 10px 250px 250px 10px;
+}
+.left .logincoverimg {
+  border-radius: 10px 250px 250px 10px;
+  max-width: 100%;
+  height: auto;  
+}
+.logincontainer .right {
+  flex: 1;
+  padding: 40px;
+}
+.right .logpara{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.right .form-group {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.right .label{
+  font-size: 15px;
+}
+.loginlabel .loginusername,.loginlabel .loginpassword{
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-top: 3px;
+}
+.loginbtn button{
+  width: 100%;
+  padding: 6px;
+  background-color: #212B44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginbtn button:hover {
+  background-color: #E20606;
+}
+
+form .forget{
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: end;
+}
+
+form .create{
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.fc a {
+  color: #5F4B8B;
+  text-decoration: none;
+}
+
+.fc a:hover {
+  color: #E20606;
+  text-decoration: underline;
+}
+form .error{
+  font-size: small;
+  color: #E20606;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
