@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0px;
     margin: 0px;
@@ -123,3 +124,130 @@ select option{
 }
 
 
+=======
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+  }
+.body {
+    background-color: #000;
+    color: #fff;  
+}
+
+.popularcontainer {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+.header h1{
+    font-size: 28px;
+    font-weight: 500;
+}
+.popularcontainer h2{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 50px;
+    margin-bottom: 20px
+}
+.filters select {
+    width: 100px;
+    text-align: center;
+    background: red;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.filters button:hover {
+    background: rgb(199, 0, 0);
+}
+select option{
+    background-color: #fff;
+    color: #000;
+}
+
+.anime-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px;
+    justify-content: center;
+    padding: 0 50px; 
+}
+
+.anime-card {
+    width: 150px;
+    height: 300px;
+    background: #000;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.2s;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+.anime-card h3 {
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.anime-card p {
+    font-size: 12px;
+    font-weight: 100;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+.anime-card:hover img {
+    filter: blur(4px);
+    transform: scale(1.05);
+}
+
+.anime-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 260px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.anime-card:hover .anime-description {
+    opacity: 1;
+}
+
+
+>>>>>>> 0aa03492bee25fadddf8443fcd674a7eba89e74b
