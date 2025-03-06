@@ -4,6 +4,7 @@ import LoginPage from './Component/LoginPage'
 import HomePage from './Component/HomePage'
 import PopularPage from './Component/PopularPage'
 import BlogPage from './Component/BlogPage'
+import AdminPage from './Component/AdminPage'
 import './App.css'
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/popular" element={<PopularPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
     </>

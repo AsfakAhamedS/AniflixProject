@@ -659,6 +659,7 @@ select option{
     border: 1px solid #000;
     border-radius: 4px;
     color: black;
+    margin-bottom: 10px;
 }
 .comment-form .comment-btn{
     margin-top: 10px;
@@ -702,6 +703,133 @@ select option{
 .comment-show button:hover {
     color: #980000;
 }
+
+/* Admin Page */
+.adminlogin-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+.admin{
+    border: 1px solid #23252B;
+    width: 350px;
+    padding: 30px;
+    background-color: #23252B;
+    border-radius: 15px;
+}
+.admin-head{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-logout-btn{
+    float: right;
+    width: 80px;
+    background: none;
+    border: none;
+    color: #E20606;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.admin-logout-btn:hover{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+.admin-container{
+    display: flex;
+}
+.admin-menu{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    max-height: 100%;
+    background-color: #b42929;
+}
+.admin-data{
+    width: 80%;
+    height: 91vh;
+}
+.menu-item{
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.menu-item button{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    text-align: start;
+    color: #fff;
+    background: none;
+    border: none;
+}
+.menu-item:hover{
+    background-color: #c12929;
+    border: 3px solid black;
+}
+.manage-anime{
+    padding: 20px;
+    width: 100%;
+}
+.manage-head{
+    margin-bottom: 40px;
+}
+.manage-table{
+    padding: 0px 50px;
+}
+table{
+    width: 100%;
+}
+table,table td,table th {
+    text-align: center;
+    padding: 10px 20px;
+}
+thead{
+    background-color: #b42929;
+    color: white;
+    text-transform: uppercase;
+    font-size: smaller;
+}
+.m-icon{
+    padding: 2px;
+    background:none;
+    border: none;
+    color: #E20606;
+    margin-right: 20px;
+}
+.m-icon:hover{
+    border-radius: 50px;
+    background: #403d3d;
+}
+.manage-form{
+    align-items: center;
+}
+.m-form{
+    padding: 50px;
+}
+.m-grp{
+    margin-bottom: 30px;
+}
+.input-label{
+    font-size: 15px;
+    display: block;
+}
+.title, .image, .rating, .season, .episode, .subtitle, .gen, .description, .descriptionbrift, .audio, .subtitles, .duration, .genres{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+input:focus {
+    outline: none;
+}  
+
 
 
 

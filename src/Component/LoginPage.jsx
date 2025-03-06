@@ -6,8 +6,8 @@ import LoginPageImage from '../../public/image/LoginPageImage.jpg'
 
 
 function LoginPage() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  // const [username, setUsername] = useState('')
+  // const [password, setPassword] = useState('')
   const [loginData,setLoginData]=useState({username:"",password:""})
   const [confirmPassword,setConfirmPassword]=useState('')
   const [loginerror, setLoginerror] = useState('')

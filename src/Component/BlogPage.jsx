@@ -219,7 +219,8 @@ function BlogPage() {
               <div className="comment-section">
                 <form className='comment-form' onSubmit={handlecomment}>
                   <label className='coment-header'>Comment :</label> 
-                  <input type="text" name="com" id="com" value={comdata} onChange={(e) => {setComdata(e.target.value)}} placeholder='Write a comments...'/>
+                  {/* <input type="text" name='comname' placeholder='Name'/> */}
+                  <input type="text" name="com" id="com" value={comdata} onChange={(e) => {setComdata(e.target.value)}} placeholder='Write a comment'/>
                   <input type="submit" className='comment-btn'  value={editid === null ? "Submit" : "Update" } />
                 </form>
                 <div className="comment-show">
