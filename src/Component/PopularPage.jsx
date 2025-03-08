@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router";
 import Logo from '../../public/image/Logo.png'
 import {FaStar, FaPlay, FaPlus, FaShareAlt, FaEllipsisV, FaBars  } from "react-icons/fa";
+import { BiBookmark } from "react-icons/bi";
 
 
 const url = "http://localhost:4500/"
@@ -104,6 +105,7 @@ function PopularPage() {
                      onClick={() => navigate('/popular')} className='nav-btn'>Popular</button></li>
                     {/* <li className='nav-list'><button onClick={() => navigate('/categories')} className='nav-btn'>Categories</button></li>*/}
                     <li className='nav-list'><button onClick={() => navigate('/blog')} className='nav-btn'>Blog</button></li> 
+                     <li className='nav-list'><button onClick={() => navigate('/watchlist')} className='nav-btn'><BiBookmark style={{width:"22px",height:"22px",position:"absolute",top:"22px"}}/></button></li> 
                 </ul>
                 <button onClick={handleLogout} className='header-logout-btn'>Logout</button>
                 <button className='header-menu-btn' onClick={()=>setMenuOpen(!menuOpen)} ><FaBars /></button>
@@ -156,7 +158,7 @@ function PopularPage() {
                                 <p>{item.gen}</p>
                                 <div className='card-foot' style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
                                   <p>{item.subtitle}</p>
-                                  <div style={{ display: "flex", gap: "10px"}}><FaPlay style={{fontSize: "12px", color: "#8d8d8d"}}/><FaPlus style={{fontSize: "12px", color: "#8d8d8d"}}/></div>
+                                  <div style={{ display: "flex", gap: "10px"}}><FaPlay style={{fontSize: "12px", color: "#8d8d8d"}}/> <BiBookmark  style={{fontSize: "15px", color: "#8d8d8d"}}/></div>
                                 </div>
                             </div>
                             </div>

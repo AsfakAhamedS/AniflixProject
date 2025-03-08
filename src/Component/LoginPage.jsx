@@ -81,8 +81,11 @@ function LoginPage() {
       })
       .catch(e => {
         console(e.response.data.error)
-      }) 
+      })
     setSelected(!selected);
+    setFormdata({name:"",email:"",password:""})
+    setConfirmPassword("")
+    setError("")
   }
   
     return (
@@ -182,7 +185,7 @@ function LoginPage() {
                         </div>
                       )}
                     <div className="already-login">
-                      <button onClick={() => {setSelected(!selected)}}>{!selected ? "Already have account? Login":"Create account"}</button>
+                      <button onClick={() => {setSelected(!selected),setNext(true)}}>{!selected ? "Already have account? Login":"Create account"}</button>
                     </div>
                   </div>
                   )}

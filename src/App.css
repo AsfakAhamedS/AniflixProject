@@ -141,7 +141,8 @@ input:focus {
     width: 100%;
     height: 60px;
     padding: 15px 50px;
-    background-color: #23252B
+    background-color: #23252B;
+    position: relative;
 }
 .nav-logo{
     height: 24px;
@@ -286,6 +287,9 @@ input:focus {
 }
 .anime-card:hover .anime-description {
     opacity: 1;
+}
+.home-icon:hover{
+    color: #E20606;
 }
 
 .display-anime {

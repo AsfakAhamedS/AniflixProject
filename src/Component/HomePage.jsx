@@ -1,10 +1,13 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { Link } from "react-router";
 import Carousel from './Carousel/Carousel';
 import Logo from '../../public/image/Logo.png'
 import {FaStar, FaPlay, FaPlus, FaShareAlt, FaEllipsisV, FaBars  } from "react-icons/fa";
+import { BiBookmark } from "react-icons/bi";
+import { AppContext } from './AppContext';
+
 
 
 
@@ -16,6 +19,7 @@ function HomePage() {
     const[menuopen,setMenuopen]=useState(false)
     const [selected,setSelected] = useState(null)
     const [homedisplaydata,setHomedisplaydata] = useState(null)
+    const {setMessage} = useContext(AppContext)
 
     useEffect(() => {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -77,6 +81,7 @@ function HomePage() {
                 <li className='nav-list'><button onClick={() => navigate('/popular')} className='nav-btn'>Popular</button></li>
                 {/* <li className='nav-list'><button onClick={() => navigate('/categories')} className='nav-btn'>Categories</button></li> */}
                 <li className='nav-list'><button onClick={() => navigate('/blog')} className='nav-btn'>Blog</button></li> 
+                <li className='nav-list'><button onClick={() => navigate('/watchlist')} className='nav-btn'><BiBookmark style={{width:"22px",height:"22px",position:"absolute",top:"22px"}}/></button></li> 
               </ul>
               <button onClick={handleLogout} className='header-logout-btn'>Logout</button>
               <button className='header-menu-btn' onClick={()=>setMenuopen(!menuopen)} ><FaBars /></button>
@@ -115,7 +120,12 @@ function HomePage() {
                         <p>{item.gen}</p>
                         <div className='card-foot' style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
                           <p>{item.subtitle}</p>
-                          <div style={{ display: "flex", gap: "10px"}}><FaPlay style={{fontSize: "12px", color: "#8d8d8d"}}/><FaPlus style={{fontSize: "12px", color: "#8d8d8d"}}/></div>
+                          <div style={{ display: "flex", gap: "10px"}}>
+                            <FaPlay className='home-icon' style={{fontSize: "11px", color: "#8d8d8d"}}/>
+                            <button className='nav-btn' onClick={() => setMessage(item.id)} style={{background:"none",border:"none"}}>
+                              <BiBookmark  style={{fontSize: "15px", color: "#8d8d8d"}}/>
+                            </button> 
+                          </div>
                         </div>
                       </div>
                     </div>

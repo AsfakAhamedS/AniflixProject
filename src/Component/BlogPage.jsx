@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import Logo from '../../public/image/Logo.png'
 import {FaBars} from "react-icons/fa";
 import { MdEdit,MdDelete } from "react-icons/md";
+import { BiBookmark } from "react-icons/bi";
 
 
 
@@ -121,8 +122,7 @@ function BlogPage() {
       setComdata(comment)
       setEditid(id)
     }
-  
-
+    
     return (
       <>
         <div className="body">
@@ -141,6 +141,7 @@ function BlogPage() {
                 fontSize : `${active === "blog" ? "18px" : null}`,
                 textUnderlineOffset : `${active === "blog" ? "8px" : null}`}} 
                 onClick={() => navigate('/blog')} className='nav-btn'>Blog</button></li> 
+                 <li className='nav-list'><button onClick={() => navigate('/watchlist')} className='nav-btn'><BiBookmark style={{width:"22px",height:"22px",position:"absolute",top:"22px"}}/></button></li> 
               </ul>
               <button onClick={handleLogout} className='header-logout-btn'>Logout</button>
               <button className='header-menu-btn' onClick={()=>setMenuOpen(!menuOpen)} ><FaBars /></button>
